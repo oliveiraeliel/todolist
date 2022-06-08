@@ -1,7 +1,23 @@
-import React from 'react'
+import React from "react";
 
-export default function Login() {
+import { Board, Body, InputPlace } from "./styles";
+
+import { Input, SpecialLetter } from "../../components";
+
+const Login: React.FC = () => {
   return (
-    <div>Login</div>
-  )
-}
+    <Body>
+      <Board>
+        <div className="title">
+          <SpecialLetter text="LOGIN" />
+        </div>
+        <InputPlace>
+          <Input label="Label" />
+          <Input inputValue="Value" label="Label" />
+        </InputPlace>
+      </Board>
+    </Body>
+  );
+};
+
+export default Login;

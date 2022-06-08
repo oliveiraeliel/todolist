@@ -4,11 +4,14 @@ import { Body, Slogan, Logo } from "./styles";
 
 import { Button, SpecialLetter } from "../../components";
 
+
+
+
 const Home: React.FC = () => {
   return (
     <>
       <Body>
-        <SpecialLetter text="TODO.LIST"/>
+        <SpecialLetter text="TODO.LIST" />
         {/* <Logo>
           T<span>O</span>D<span>O</span>
           <span>.</span>L<span>I</span>ST
@@ -19,8 +22,13 @@ const Home: React.FC = () => {
             is <span>great</span>
           </div>
         </Slogan>
-        <Button button_text="let's get started" onClick={()=>{alert("a")}}/>
-        <a className="start-without-account" href="">start without account</a>
+        <Button
+          button_text="let's get started"
+          onClick={() => window.location.href = "/login"}
+        />
+        <a className="start-without-account" href="">
+          start without account
+        </a>
       </Body>
     </>
   );
