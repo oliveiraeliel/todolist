@@ -7,7 +7,7 @@ import { Button, Input, SpecialLetter } from "../../components";
 
 const AuthPage: React.FC = () => {
   const { pathname } = useLocation();
-  const isLoginPage: boolean = pathname == "/auth/login";
+  const isLoginPage: boolean = pathname === "/auth/login";
 
   return (
     <Body>
@@ -16,7 +16,7 @@ const AuthPage: React.FC = () => {
           <SpecialLetter text={isLoginPage ? "LOGIN" : "SIGN.UP"} />
         </div>
         <InputPlace style={{ flex: isLoginPage ? "2" : "3" }}>
-          {pathname == "/auth/sign-up" ? (
+          {pathname === "/auth/sign-up" ? (
             <Input placeholder="your name" label="name" />
           ) : (
             ""
