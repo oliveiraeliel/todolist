@@ -27,10 +27,6 @@ const AppProvider: React.FC<IChildren> = ({ children }) => {
     setUseLocaly,
   };
 
-  useEffect(() => {
-    console.log(useLocaly);
-  }, [useLocaly]);
-
   return <AppContext.Provider value={states}>{children}</AppContext.Provider>;
 };
 

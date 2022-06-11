@@ -13,8 +13,8 @@ export const Body = styled.button`
   background-color: var(--primary-color);
   outline: none;
   border: 3px solid var(--secondary-color);
-    @media(max-width: 550px){
-        width: 90%;
-        font-size: 5vw;
-    }
+  @media (max-width: 550px) {
+    width: 100%;
+    font-size: 5vw;
+  }
 `;

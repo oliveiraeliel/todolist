@@ -28,7 +28,10 @@ export const Board = styled.div`
   }
 
   .title {
+    display: flex;
     flex: 1;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
@@ -42,10 +45,23 @@ export const InputPlace = styled.div`
     width: 100%;
   }
 
-  .bottom-text {
+  .bottom-links {
     text-align: center;
-    text-decoration: none;
-    color: var(--imperial-red);
-    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    .bottom-text {
+      text-align: center;
+      text-decoration: none;
+      color: var(--imperial-red);
+      font-weight: 600;
+    }
+    .start-without-account {
+      text-align: center;
+      text-decoration: none;
+      color: var(--terciary-color);
+      font-weight: 600;
+    }
   }
 `;

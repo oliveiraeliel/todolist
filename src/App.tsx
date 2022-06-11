@@ -11,9 +11,10 @@ const App: React.FC = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Init />} />
-          <Route path="auth/login" element={<AuthPage />} />
-          <Route path="auth/sign-up" element={<AuthPage />} />
-          <Route path="home" element={<Home />} />
+          <Route path="/auth/login" element={<AuthPage />} />
+          <Route path="/auth/sign-up" element={<AuthPage />} />
+          <Route path="/homepage" element={<Home />} />
+          <Route path="*" element={<Init />} />
         </Routes>
       </BrowserRouter>
     </AppProvider>

@@ -27,9 +27,14 @@ const AuthPage: React.FC = () => {
             button_text={isLoginPage ? "login" : "create"}
             onClick={() => alert()}
           />
-          <a className="bottom-text" href={isLoginPage ? "sign-up" : "login"}>
-            {isLoginPage ? "create new account" : "I already have an account"}
-          </a>
+          <div className="bottom-links">
+            <a className="bottom-text" href={isLoginPage ? "sign-up" : "login"}>
+              {isLoginPage ? "create new account" : "I already have an account"}
+            </a>
+            <a className="start-without-account" href="/homepage">
+              start without account
+            </a>
+          </div>
         </InputPlace>
       </Board>
     </Body>
