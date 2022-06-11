@@ -7,13 +7,12 @@ export const Letter = styled.a`
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--terciary-color);
   letter-spacing: 0.2rem;
-
   span {
     color: var(--secondary-color);
   }
 
-  @media (max-width: 830px) {
-    font-size: 17vw;
-  }
+    @media (max-width: 830px) {
+      font-size: 17vw;
+    }
 
 `;

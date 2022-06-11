@@ -1,3 +1,3 @@
-export { default as Home } from "./Home";
-export { default as Login } from "./Login";
-export { default as SignUp } from "./Sign-up";
+export { default as Init } from "./InicialPage";
+export { default as AuthPage } from "./AuthPage";
+export { default as Home } from "./HomePage";

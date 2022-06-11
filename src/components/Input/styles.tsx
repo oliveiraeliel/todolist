@@ -7,20 +7,15 @@ export const InputBoard = styled.div`
   label {
     size: 1.4rem;
     margin: 1rem 0 0.5rem 0;
-    align-items: flex-start;
+    font-weight: 500;
   }
 `;
 
 export const InputBox = styled.input`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+  width: auto;
   height: 35px;
   outline: none;
   border-radius: 10px;
   border-color: transparent;
   padding: 5px;
-  align-items: center;
 `;

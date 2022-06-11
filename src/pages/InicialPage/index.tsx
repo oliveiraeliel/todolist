@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import { Body, Slogan, Logo } from "./styles";
 
 import { Button, SpecialLetter } from "../../components";
 
+import AppContext from "../../contexts/appContext";
 
+const Init: React.FC = () => {
+  const { useLocaly, setUseLocaly } = useContext(AppContext);
 
-
-const Home: React.FC = () => {
   return (
     <>
       <Body>
@@ -24,9 +25,15 @@ const Home: React.FC = () => {
         </Slogan>
         <Button
           button_text="let's get started"
-          onClick={() => window.location.href = "/login"}
+          onClick={() => (window.location.href = "auth/login")}
         />
-        <a className="start-without-account" href="">
+        <a
+          className="start-without-account"
+          onClick={() => {
+            setUseLocaly(!useLocaly);
+            window.location.href = "/home";
+          }}
+        >
           start without account
         </a>
       </Body>
@@ -34,4 +41,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default Init;

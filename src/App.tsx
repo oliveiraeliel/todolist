@@ -1,17 +1,22 @@
 import React from "react";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 
-import { Home, Login, SignUp } from "./pages";
+import { Home, Init, AuthPage } from "./pages";
+
+import { AppProvider } from "./contexts/appContext";
 
 const App: React.FC = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="login" element={<Login />} />
-        <Route path="sign-up" element={<SignUp />} />
-      </Routes>
-    </BrowserRouter>
+    <AppProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Init />} />
+          <Route path="auth/login" element={<AuthPage />} />
+          <Route path="auth/sign-up" element={<AuthPage />} />
+          <Route path="home" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </AppProvider>
   );
 };
 
