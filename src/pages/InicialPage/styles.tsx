@@ -32,6 +32,25 @@ export const BottomBox = styled.div`
   width: 100vw;
   text-align: center;
 
+  @keyframes fa-blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.25;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .fa-blink {
+    -webkit-animation: fa-blink 2s linear infinite;
+    -moz-animation: fa-blink 2s linear infinite;
+    -ms-animation: fa-blink 2s linear infinite;
+    -o-animation: fa-blink 2s linear infinite;
+    animation: fa-blink 2s linear infinite;
+  }
+
   .start-without-account {
     font-weight: 500;
     font-size: 1.2rem;

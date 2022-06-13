@@ -6,7 +6,6 @@ import { Button, SpecialLetter } from "../../components";
 import AppContext from "../../contexts/appContext";
 
 const Init: React.FC = () => {
-  
   const { useLocaly, setUseLocaly } = useContext(AppContext);
 
   return (
@@ -28,7 +27,7 @@ const Init: React.FC = () => {
             onClick={() => (window.location.href = "auth/login")}
           />
           <a
-            className="start-without-account"
+            className="start-without-account fa-blink"
             onClick={() => {
               setUseLocaly(!useLocaly);
               window.location.href = "/homepage";
