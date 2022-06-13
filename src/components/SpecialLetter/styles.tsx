@@ -11,8 +11,7 @@ export const Letter = styled.a`
     color: var(--secondary-color);
   }
 
-    @media (max-width: 830px) {
-      font-size: 17vw;
-    }
-
+  @media (max-width: 830px) {
+    font-size: 17vw;
+  }
 `;

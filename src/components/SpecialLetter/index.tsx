@@ -5,6 +5,7 @@ import { Letter } from "./styles";
 
 type SpecialLetterProps = {
   text: string;
+  style?: React.CSSProperties;
 };
 
 const SpecialLetter = (props: SpecialLetterProps) => {
@@ -26,7 +27,7 @@ const SpecialLetter = (props: SpecialLetterProps) => {
   }, []);
 
   return (
-    <Letter>
+    <Letter style={props.style}>
       <div dangerouslySetInnerHTML={{ __html: text }} />
     </Letter>
   );
