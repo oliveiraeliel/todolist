@@ -1,20 +1,26 @@
 import React, { useContext } from "react";
-import { SpecialLetter } from "../../components";
+
+import { SpecialLetter, TaskMenu } from "../../components";
 
 import AppContext from "../../contexts/appContext";
-import { NavBar, Main } from "./styles";
+import { NavBar, Main, CompletedMenu, Body } from "./styles";
 
 const Home: React.FC = () => {
   const { signed, user } = useContext(AppContext);
 
   return (
-    <div>
+    <Body>
       <NavBar>
         <SpecialLetter text="TODO.LIST" style={{ fontSize: "5rem" }} />
-        {user !== null ? user.name : "create account"}
+        {user ? user.name : "create account"}
       </NavBar>
-      <Main></Main>
-    </div>
+      <Main>
+        <TaskMenu title="tasks"/>
+        {/* <TasksMenu></TasksMenu>
+        <TasksMenu></TasksMenu> */}
+        {/* <CompletedMenu></CompletedMenu> */}
+      </Main>
+    </Body>
   );
 };
 

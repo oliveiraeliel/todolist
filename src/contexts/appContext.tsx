@@ -6,6 +6,8 @@ interface IAppContext {
   setUser: React.Dispatch<React.SetStateAction<IUser | null>>;
   useLocaly: boolean;
   setUseLocaly: React.Dispatch<React.SetStateAction<boolean>>;
+  list: IListInfos | null;
+  setList: React.Dispatch<React.SetStateAction<IListInfos | null>>;
 }
 
 interface IUser {

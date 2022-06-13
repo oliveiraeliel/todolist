@@ -9,35 +9,33 @@ const Init: React.FC = () => {
   const { useLocaly, setUseLocaly } = useContext(AppContext);
 
   return (
-    <>
-      <Body>
-        <div>
-          <SpecialLetter text="TODO.LIST" />
-          <Slogan>
-            keeping <span>things</span> organized
-            <div>
-              is <span>great</span>
-            </div>
-          </Slogan>
-        </div>
+    <Body>
+      <div>
+        <SpecialLetter text="TODO.LIST" />
+        <Slogan>
+          keeping <span>things</span> organized
+          <div>
+            is <span>great</span>
+          </div>
+        </Slogan>
+      </div>
 
-        <BottomBox>
-          <Button
-            button_text="let's get started"
-            onClick={() => (window.location.href = "auth/login")}
-          />
-          <a
-            className="start-without-account fa-blink"
-            onClick={() => {
-              setUseLocaly(!useLocaly);
-              window.location.href = "/homepage";
-            }}
-          >
-            start without account
-          </a>
-        </BottomBox>
-      </Body>
-    </>
+      <BottomBox>
+        <Button
+          button_text="let's get started"
+          onClick={() => (window.location.href = "auth/login")}
+        />
+        <a
+          className="start-without-account fa-blink"
+          onClick={() => {
+            setUseLocaly(!useLocaly);
+            window.location.href = "/homepage";
+          }}
+        >
+          start without account
+        </a>
+      </BottomBox>
+    </Body>
   );
 };
 
