@@ -2,10 +2,26 @@ import React, { createContext, useState } from "react";
 
 interface IAppContext {
   signed: boolean;
-  user: object | null;
+  user: IUser | null;
+  setUser: React.Dispatch<React.SetStateAction<IUser | null>>;
   useLocaly: boolean;
   setUseLocaly: React.Dispatch<React.SetStateAction<boolean>>;
 }
+
+interface IUser {
+  name: string;
+  email: string;
+}
+
+interface IListInfos {
+  infos: Array<infos>;
+}
+
+type infos = {
+  title: string;
+  description?: string;
+  createdAt: string;
+};
 
 interface IChildren {
   children: React.ReactNode;
@@ -13,18 +29,26 @@ interface IChildren {
 
 const AppContext = createContext<IAppContext>({} as IAppContext);
 
-const userInfos = localStorage.getItem("user");
+const userInfos: IUser | null = JSON.parse(
+  localStorage.getItem("todolist@user") || "null"
+);
+const listInfos: IListInfos | null = JSON.parse(
+  localStorage.getItem("todolist@listInfos") || "null"
+);
 
 const AppProvider: React.FC<IChildren> = ({ children }) => {
-  const [user, setUser] = useState<object | null>(null);
+  const [user, setUser] = useState<IUser | null>(userInfos);
+  const [list, setList] = useState<IListInfos | null>(listInfos);
   const [useLocaly, setUseLocaly] = useState<boolean>(Boolean(userInfos));
 
   const states = {
-    signed: Boolean(user),
+    signed: Boolean(userInfos),
     user,
     setUser,
     useLocaly,
     setUseLocaly,
+    list,
+    setList,
   };
 
   return <AppContext.Provider value={states}>{children}</AppContext.Provider>;
